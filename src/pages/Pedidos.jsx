@@ -1,5 +1,6 @@
 import { useEffect,useState } from "react"
 import { ApiWebURL } from "../utils"
+import { Link } from "react-router-dom"
 
 export default function Pedidos() {
   const [listaPedidos,setListaPedidos]=useState([])
@@ -23,6 +24,7 @@ export default function Pedidos() {
         <table className="table">
             <thead>
                 <tr>
+                    <th className="text-center">Accion</th>
                     <th>Fecha</th>
                     <th>Nombres</th>
                     <th>total</th>
@@ -32,7 +34,12 @@ export default function Pedidos() {
             <tbody>
                 {listaPedidos.map(item =>
                     <tr key={item.idpedido}>
-                        <td>{item.usuario}</td>
+                        <td className="d-flex justify-content-center">
+                            <Link to={"/detallepedidos/"+item.idpedido}>
+                                <button className="btn btn-primary">Ver pedido</button>
+                            </Link>
+                        </td>
+                        <td>{item.fechapedido}</td>
                         <td>{item.nombres}</td>
                         <td>{item.total}</td>
                         <td>{item.usuario}</td>
