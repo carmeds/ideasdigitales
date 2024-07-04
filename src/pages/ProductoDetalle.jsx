@@ -4,8 +4,6 @@ import { ApiWebURL } from "../utils"
 import nofoto from "./../assets/images/nofoto.jpg"
 function ProductoDetalle() {
     const params = useParams()
-    console.log(params)
-
     const [productoSeleccionado, setProductoSeleccionado] = useState([])
 
     useEffect(() => {
@@ -18,7 +16,6 @@ function ProductoDetalle() {
         fetch(rutaServicio)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 setProductoSeleccionado(data[0])
             })
     }
@@ -36,6 +33,7 @@ function ProductoDetalle() {
                     </div>
                     <div className="col">
                         <table className="table">
+                            <tbody>
                             <tr>
                                 <th>Detalle</th>
                                 <td>{productoSeleccionado.detalle}</td>
@@ -64,6 +62,7 @@ function ProductoDetalle() {
                                 <th>Paìs</th>
                                 <td>{productoSeleccionado.pais}</td>
                             </tr>
+                            </tbody>
                         </table>
                         <h3>Descripción</h3>
                         <div dangerouslySetInnerHTML={{ __html: productoSeleccionado.descripcion}}></div>

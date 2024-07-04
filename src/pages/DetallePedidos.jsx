@@ -31,7 +31,7 @@ export default function DetallePedidos() {
                         <div className="card-body">
                             <p className="text-uppercase font-weight-bold">
                                 {item.nombre}</p>
-                            <p className="mb-1">Precio: s/.{item.precio}</p>
+                            <p className="mb-1">Precio: s/.{parseFloat(item.precio).toFixed(2)}</p>
                             <p className="mb-1">Cantidad: {item.cantidad}</p>
                             <p className="mb-1">Detalle: {item.detalle}</p>
 
