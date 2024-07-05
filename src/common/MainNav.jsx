@@ -31,6 +31,10 @@ function MainNav() {
                             <Link className="nav-link" to="/carrito"><i className="bi bi-basket"></i> Carrito</Link>
                         </li>
                         <li className="nav-item">
+                            <Link className="nav-link" to="/seleccionados"><i className="bi bi-basket"></i> Seleccionados</Link>
+                        </li>
+
+                        <li className="nav-item">
                             <Link className="nav-link" to="/"><i className="bi bi-person"></i> Iniciar sesión</Link>
                         </li>
                         

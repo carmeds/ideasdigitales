@@ -3,7 +3,6 @@ export const ApiWebURL = "https://servicios.campus.pe/"
 export const agregarCarrito = (item, cantidadProducto) => {
     item.cantidad = Number(cantidadProducto)
     item.precio = item.preciorebajado === "0" ? item.precio : item.preciorebajado
-    console.log(item)
     let carrito = []
     if (sessionStorage.getItem("carritocompras")){
         carrito = JSON.parse(sessionStorage.getItem("carritocompras"))

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { ApiWebURL } from "../utils"
+import { carritoEmp } from "../utils/carritoEmp"
 import './../components/Productos.css'
 
 function Empleados() {
@@ -23,11 +24,6 @@ function Empleados() {
     const leerEmpleadoSeleccionado=(item)=>{
         setEmpleadoSeleccionado(item)
     }
-
-    const agregarEmpleadoCarrito=(item)=>{
-        console.log(item)
-    }
-
 
     const dibujarCuadricula = () => {
         return (
@@ -78,9 +74,9 @@ function Empleados() {
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" className="btn btn-primary"
+                        <button type="button" className="btn btn-primary" data-bs-dismiss="modal"
                         onClick={()=>{
-                            agregarEmpleadoCarrito(empleadoSeleccionado)
+                            carritoEmp(empleadoSeleccionado)
                         }}
                         >Agregar al Carrito</button>
                     </div>
