@@ -9,8 +9,8 @@ function Inicio() {
         <>
             <MainBanner/>
             <Nosotros/>
-            <Noticias/>
             <Tutorial />
+            <Noticias/>
             <Envios/>
         </>
     )

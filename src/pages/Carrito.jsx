@@ -10,10 +10,11 @@ function Carrito() {
     }, [])
 
     const leerServicio = () => {
-        const datosCarrito = JSON.parse(sessionStorage.getItem("carritocompras"))
-        setListaItems(datosCarrito)
-        console.log(datosCarrito)
-        calcularTotal(datosCarrito)
+        if(sessionStorage.getItem('carritocompras')){
+            const datosCarrito = JSON.parse(sessionStorage.getItem("carritocompras"))
+            setListaItems(datosCarrito)
+            calcularTotal(datosCarrito)
+        }
     }
 
 

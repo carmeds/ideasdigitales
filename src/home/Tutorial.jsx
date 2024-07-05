@@ -14,15 +14,11 @@ export default function Tutorial() {
   }
   return (
     <>
-    <section className='padded bg-primary text-white'>
+    <section className='padded bg-info text-white'>
         <div className="container">
             <h2>Tutoriales</h2>
-            <p>
-                Nos enfocamos en ofrecer una experiencia única alrededor del cafe. Trabajamos con productores orgánicos
-                y cafés de la mas alta calidad que alcanzan entre 84 a 87 puntos en taza. 
-                Una visita a nuestro Coffee bar es una experiencia sensorial que combina aroma, sabor y un buen ambiente acogedor!.
-                Ofrecemos tambien opciones como bebidas frías, repostería y snacks. 
-                Porque un buen café debe ser bueno para ti y para el agricultor.
+            <p className="font-weight-bold">
+              Consulta la preparación de los diferentes tipos de café en nuestras instalaciones.
             </p>
 
             <div className='row flex flex-wrap justify-content-center w-full p-2'>
