@@ -25,6 +25,9 @@ function MainNav() {
                         <li className="nav-item">
                             <Link className="nav-link" to="/pedidos">Pedidos</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/paises">Paises</Link>
+                        </li>
                     </ul>
                     <ul className="navbar-nav">
                         <li className="nav-item">
